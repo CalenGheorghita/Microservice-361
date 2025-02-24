@@ -2,6 +2,7 @@
 Microservice README for CS361 by Caleb Gheorghita
 Hi, This is my budget microservice that helps track expenses and income. Here's how to use it:
 
+# Request Data
 How to Request Data From My Microservice:
 It's pretty simple! You just need to use Python's requests library to make GET requests. Here's how:
 First, make sure you have requests installed:
@@ -20,6 +21,7 @@ Get expense categories:
 This shows expenses grouped by category
 response = requests.get("http://localhost:5000/api/expenses/categories", params={"user_id": 1})
 
+# Getting data
 How to Get the Data Back:
 After you make a request, getting the data is easy! Just use .json() to convert the response:
 
@@ -27,12 +29,14 @@ Example of getting expense data
 response = requests.get("http://localhost:5000/api/expenses/trend", params={"user_id": 1})
 data = response.json()
 
+# Example code for output
 Now you can print it out!
 for item in data:
     print(f"Year: {item['year']}")
     print(f"Month: {item['month']}")
     print(f"Total Expense: ${item['total_expense']}")
 
+# Example Data output
 What The Data Looks Like:
 Here's what you'll get back for each request:
 
@@ -67,6 +71,7 @@ Expense Categories:
     # You'll get one of these for each category
 ]
 
+# UML diagram
 How It All Works (UML Diagram):
 Here's a diagram showing how the requests and responses work:
 
