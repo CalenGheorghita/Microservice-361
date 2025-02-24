@@ -6,7 +6,7 @@ Hi, This is my budget microservice that helps track expenses and income. Here's 
 How to Request Data From My Microservice:
 It's pretty simple! You just need to use Python's requests library to make GET requests. Here's how:
 First, make sure you have requests installed:
-pip install requests
+pip install requests.
 Then you can make requests to any of these three endpoints:
 
 Get expense trends:
