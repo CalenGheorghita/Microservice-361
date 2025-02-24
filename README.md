@@ -9,25 +9,25 @@ pip install requests
 Then you can make requests to any of these three endpoints:
 
 Get expense trends:
-# This shows expenses over time
+This shows expenses over time
 response = requests.get("http://localhost:5000/api/expenses/trend", params={"user_id": 1})
 
 Get income trends:
-# This shows income over time
+This shows income over time
 response = requests.get("http://localhost:5000/api/income/trend", params={"user_id": 1})
 
 Get expense categories:
-# This shows expenses grouped by category
+This shows expenses grouped by category
 response = requests.get("http://localhost:5000/api/expenses/categories", params={"user_id": 1})
 
 How to Get the Data Back:
 After you make a request, getting the data is easy! Just use .json() to convert the response:
 
-# Example of getting expense data
+Example of getting expense data
 response = requests.get("http://localhost:5000/api/expenses/trend", params={"user_id": 1})
 data = response.json()
 
-# Now you can print it out!
+Now you can print it out!
 for item in data:
     print(f"Year: {item['year']}")
     print(f"Month: {item['month']}")
